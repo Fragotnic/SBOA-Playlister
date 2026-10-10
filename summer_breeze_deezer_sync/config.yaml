@@ -1,0 +1,24 @@
+name: "Summer Breeze Deezer Sync"
+version: "1.0.0"
+slug: "summer_breeze_deezer_sync"
+description: "Pflegt automatisch täglich eine Deezer-Playlist mit den Top-Tracks aller aktuell auf der Summer-Breeze-Bandseite gelisteten Bands. Für jedes Festivaljahr wird automatisch eine neue Playlist angelegt."
+url: "https://github.com/DEIN_GITHUB_USER/summer-breeze-deezer-addon"
+startup: application
+boot: auto
+init: false
+arch:
+  - aarch64
+  - amd64
+  - armhf
+  - armv7
+  - i386
+options:
+  deezer_access_token: ""
+  playlist_prefix: "SBOD"
+  bands_url: "https://www.summer-breeze.de/de/bands/?bands_sort_order=alph"
+  sync_hour: 6
+schema:
+  deezer_access_token: password
+  playlist_prefix: str
+  bands_url: url
+  sync_hour: int(0,23)
